@@ -1,0 +1,34 @@
+<header>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Naruto Character</span>
+    </div>
+  </nav>
+</header>
+
+<main class="container d-flex flex-wrap justify-content-center gap-5">
+  @for (elemento of todosLosDatos; track elemento.id) {
+  <div class="card" style="width: 18rem">
+    <figure>
+      <img src="{{ elemento.images[0] }}" class="card-img-top" alt="..." />
+    </figure>
+    <div class="card-body">
+      <h5 class="card-title">{{ elemento.name }}</h5>
+    </div>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ elemento.jutsu[0] }}</li>
+      <li class="list-group-item">{{ elemento.natureType }}</li>
+    </ul>
+  </div>
+  }
+</main>
+
+<footer class="container-fluid">
+  <div class="col mb-2 mt-4 logo-footer">
+    <p class="text-body-light">
+      © Naruto 2002 / Naruto: Shippūden 2007 / BORUTO: Naruto Next Generations
+      2016
+    </p>
+  </div>
+</footer>
